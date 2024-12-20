@@ -12,11 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.ViewModelProvider
 import com.example.chatrisky.ui.theme.ChatRiskyTheme
 
+//Komponen utama aplikasi.
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {//savedInstanceState: Menyimpan data jika ada proses seperti rotasi layar.
+        super.onCreate(savedInstanceState)//
         enableEdgeToEdge()
-        val chatViewModel = ViewModelProvider(this)[ChatViewModel::class.java]
+        val chatViewModel = ViewModelProvider(this)[ChatViewModel::class.java]//Membuat instance ChatViewModel untuk mengelola data dan logika aplikasi.
         setContent {
             ChatRiskyTheme {
                 Scaffold(
